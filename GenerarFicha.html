@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="estilos/ficha.css">
+	<link rel="stylesheet" href="estilos/normalize.css">
+	<script src="https://kit.fontawesome.com/08348ab59f.js" crossorigin="anonymous"></script>
+    <title>Generar Ficha</title>
+</head>
+<body>
+	<header>
+		<div class="contenedor__titulo">
+			<h1 class="titulo">Cabeza de Algodón</h1>
+			<h2 class="subTitulo">Generar Ficha Medica</h3>
+		</div>
+		<div>
+		</div>
+		<div class="contenedor__nav">
+			<nav>
+				<ul>
+					<li class="li__nav"><i class="fas fa-sign-out-alt"></i><a class="ss" href="#">Cerrar sesion</a></li>
+					<li class="li__nav"><i class="fas fa-search"></i><a class="ss" href="#">Buscar Paciente</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<div class="main">
+		<form class="GenerarFicha">
+			<section class="datosP">
+				<div class="contenedor">
+					<div class="contenedor__subTitulos">
+						<h3>Datos del paciente</h3>
+					</div>
+					<label for="nombre" class="etiqueta">Nombre:  </label>
+					<input type="text" class="caja" id="nombre" name="nombre">
+					<label for="apellido" class="etiqueta">Apellido: </label>
+					<input type="text" class="caja" id="apellido" name="apellido">
+					<label for="edad"class="etiqueta">Edad: </label>
+					<input type="number" class="caja" id="edad" name="edad">
+				</div>
+			</section>
+			<section class="Examenes">	
+				<div class="contenedor">
+					<div class="contenedor__subTitulos">
+						<h3>Informacion General</h3>
+					</div>
+					<div class="contenedor__examen">
+						<label for="fechaVisita" class="etiqueta">Fecha visita:  </label>
+						<input type="date" class="caja" name="" id="fechaVisita" name="fechaVisita">
+						<label for="motivo" class="etiqueta">Motivo visita: </label>
+						<input type="text" class="caja" id="motivo" name="motivo">
+						<label for="meditoTratante" class="etiqueta">Medico tratante: </label>
+						<input type="text" class="caja" id="meditoTratante" name="medicoTratante">
+						<label for="examenRealizado" class="contenedor__etiqueta">Examene realizado</label>
+						<textarea  class="caja-texArea"  id="examenRealizado" cols="30" rows="10" name="examen"></textarea>
+						<label for="resultados" class="contenedor__etiqueta">Resultados</label>
+						<textarea  class="caja-texArea"  id="resultados" cols="30" rows="10" name="resultado"></textarea>
+						<label for="diagnostico" class="contenedor__etiqueta">Diagnostico: </label>
+						<textarea  class="caja-texArea"  id="diagnostico" cols="30" rows="10" name="diagnostico"></textarea>
+						<label for="observaciones" class="contenedor__etiqueta">Observaciones Medicas: </label>
+						<textarea  class="caja-texArea"  id="observaciones" cols="30" rows="10" name="observacion"></textarea>
+					</div>
+				</div>
+				<div class="contenedor">
+					<div class="contenedor__subTitulos">
+						<h3>Medicamentos aplicado</h3>
+					</div>
+					<label for="nombreMedicamento" class="contenedor__etiqueta">Nombre Medicamento:</label>
+					<input type="text" class="caja" id="nombreMedicamento" name="medicamento">
+					<label for="fechaReceta" class="contenedor__etiqueta">Fecha recetata:</label>
+					<input type="date" class="caja" id="fechaReceta" name="fechaMedicamento">
+					<label for="modoUso" class="contenedor__etiqueta">Modo de uso:</label>
+					<textarea class="caja-texArea"  id="modoUso" cols="30" rows="10" name="uso"></textarea>				
+				</div>
+			</section>
+			<input type="submit" class="button" value="GenerarFicha" id="generar">
+		</form>
+	</div>
+	<script src="Js/GenerarFicha.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.9/dist/sweetalert2.all.min.js"></script>
+</body>
+</html>

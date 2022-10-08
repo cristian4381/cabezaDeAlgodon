@@ -1,0 +1,219 @@
+body{
+    background-color: black;
+    
+}
+.padre{
+    /* margin: 10px; */
+    width: 150px;
+    height: 150px;
+    background: blue;
+    
+    display: flex;
+    /* flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+    /* border-radius: 20px; */
+}
+.hijo{
+    display: flex;
+    /*flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+    width: 90px;
+    height: 90px;
+    background-color: white;
+    /* padding: 20px; */
+    /* border-radius: 20px; */
+    box-shadow: 0px 10px 15px -10px black;
+    /* font-weight: bold; */
+}
+.hijo1{
+    display: flex;
+    /*flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    /* padding: 20px; */
+    /* border-radius: 20px; */
+    box-shadow: 0px 10px 15px -10px black;
+    /* font-weight: bold; */
+}
+.hijo2{
+    display: flex;
+    /*flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+    width: 90px;
+    height: 90px;
+    background-color: white;
+    /* padding: 20px;
+    border-radius: 20px;
+
+    font-weight: bold; */
+}
+.hijo3{
+    display: flex;
+    /*flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    /* padding: 20px;
+    border-radius: 20px;
+
+    font-weight: bold; */
+}
+.padre:hover, .padre1:hover, .padre2:hover{
+    background: #34515e;
+    cursor: pointer;
+    box-shadow: 0 0 15px 0 red;
+}
+.padre1{
+    width: 150px;
+    height: 150px;
+    background: greenyellow;
+    
+    display: flex;
+    /* flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+    /* border-radius: 20px;
+    margin: 10px; */
+}
+.padre2{
+    width: 150px;
+    height: 150px;
+    background: blue;
+   
+    display: flex;
+    /* flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+    /* border-radius: 20px;
+    margin: 10px; */
+}
+.padre3{
+    width: 150px;
+    height: 150px;
+    background: greenyellow;
+   
+    display: flex;
+    /* flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+    /* border-radius: 20px;
+    margin: 10px; */
+}
+.texto{
+    text-align: center;
+}
+.main{
+    display: flex;
+    width: 100%;
+    overflow: auto;
+}
+/*estilos para la tabla*/
+.tabla{
+    margin: 10px 0;
+    border: solid 1px #babdbe;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+thead .td{
+    font-weight: bold;
+}
+.td{
+    border-bottom: solid 1px #babdbe;
+
+}
+/* < */
+
+/*estilos detalles*/
+.button{
+    
+	
+}
+.button:hover{
+    background: #003c8f;
+}
+h3{
+    margin: 0;
+}
+.contenedor__etiqueta, .etiqueta{
+    display: block;
+    font-weight: bold;
+    padding: 10px 0;
+    
+}
+.contenedor{
+    /* border-radius: 6px; */
+    width: 500px;
+    /* margin: 0 20px 20px 20px ; */
+    padding: 20px; 
+    background-color: white;
+    box-shadow: 0px 10px 15px -10px black;
+}
+.contenedor__subTitulos{
+    /* text-align: center;
+    padding: 15px ; */
+    background-color: #42a5f5;
+    /* border-radius: 6px; */
+    
+}
+.contenedor__etiqueta, .etiqueta{
+    display: block;
+    font-weight: bold;
+    padding: 10px 0;
+    
+}
+
+/*dividiendo propiedades especficas en propiedades globales*/
+
+.center-content{
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+}
+.main-box{
+    margin: 10px;
+    border-radius: 20px;
+    
+    background-repeat: no-repeat;
+}
+.sub-box{
+    padding: 20px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+
+.bt-md{
+    width: 100%;
+    height: 35px;
+}
+.bt-border{
+    border-radius: 6px;
+	border: none;
+    margin: 10px 0;
+}
+.bt-color-red{
+    background: #C62828;
+	color: white;
+}
+.bt-color-red:hover{
+    background: #003c8f;
+    cursor: pointer;
+}
+.bt-sm{
+    width: 35px;
+    height: 35px;
+}
+.bt-bg{
+    width: 120px;
+    height: 80px;
+}

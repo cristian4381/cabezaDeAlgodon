@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="estilos/ficha.css">
+	<link rel="stylesheet" href="estilos/normalize.css">
+	<script src="https://kit.fontawesome.com/08348ab59f.js" crossorigin="anonymous"></script>
+    <title>Generar Ficha</title>
+</head>
+<body>
+	<header>
+		<div class="contenedor__titulo">
+			<h1 class="titulo">Cabeza de Algodón</h1>
+			<h2 class="subTitulo">Buscar Ficha Medica</h3>
+		</div>
+		<div>
+		</div>
+		<div class="contenedor__nav">
+			<nav>
+				<ul>
+					<li class="li__nav"><i class="fas fa-chevron-left"></i><a class="ss" id="B_regresar">Regresar</a></li>
+					<li class="li__nav"><i class="fas fa-sign-out-alt"></i><a class="ss" href="php/logout.php">Cerrar sesion</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<div class="main">
+			<section  id="busrcarF">
+				<div class="contenedor">
+					<div class="contenedor__subTitulos">
+						<h3>Ingrese el codigo del paciente</h3>
+					</div>
+					<form class="Buscarpaciente">
+						<label for="codigo" class="etiqueta">Codigo Paciente:  </label>
+						<input type="text" class="caja" id="codigo" name="codigo">
+						<input type="submit" class="button" value="Buscar Ficha" id="buscar">
+					</form>
+				</div>
+			</section>
+			<section class="oculto" id="infoFicha">
+				<section class="datosP">
+					<div class="contenedor">
+						<div class="contenedor__subTitulos">
+							<h3>Datos del paciente</h3>
+						</div>
+						<label for="nombre" class="etiqueta">Nombre: <span class="text"  id="nombre"></span> </label>
+						
+						<label for="apellido" class="etiqueta">Apellido: <span class="text" id="apellido"></span> </label>
+						
+						<label for="edad"class="etiqueta">Edad: <span class="text" id="edad"></span> </label>
+						
+					</div>
+				</section>
+				<section class="Examenes">	
+					<div class="contenedor">
+						<div class="contenedor__subTitulos">
+							<h3>Informacion General</h3>
+						</div>
+						<div class="contenedor__examen">
+							<label class="etiqueta">Fecha visita: <span class="text" id="fechaVisita"></span>  </label>
+
+							<label class="etiqueta">Motivo visita: <span class="text" id="motivo"></span> </label>
+
+							<label class="etiqueta">Medico tratante: <span class="text" id="medico"></span> </label>
+
+							<label class="contenedor__etiqueta">Examene realizado: <span class="text" id="examen"></span></label>
+
+							<label class="contenedor__etiqueta">Resultados: <span class="text" id="resultado"></span></label>
+
+							<label class="contenedor__etiqueta">Diagnostico: <span class="text" id="diagnostico"></span> </label>
+
+							<label class="contenedor__etiqueta">Observaciones Medicas: <span class="text" id="observacion"></span> </label>
+
+						</div>
+					</div>
+					<div class="contenedor">
+						<div class="contenedor__subTitulos">
+							<h3>Medicamentos aplicado</h3>
+						</div>
+						<label class="contenedor__etiqueta">Nombre Medicamento: <span class="text" id="medicamento"></span></label>
+
+						<label class="contenedor__etiqueta">Fecha recetada: <span class="text" id="fechaMedicamento"></span></label>
+
+						<label class="contenedor__etiqueta">Modo de uso: <span class="text" id="uso"></span></label>
+		
+					</div>
+					<input type="submit" class="button" value="Regresar" id="Regresar">
+			</section>
+	</div>
+	<script src="Js/BuscarFicha.js"></script>
+	<script src="JS/Regresar.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.9/dist/sweetalert2.all.min.js"></script>
+</body>
+</html>
