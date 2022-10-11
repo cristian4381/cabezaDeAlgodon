@@ -38,8 +38,9 @@ bt.onclick = async(e) =>{
         method: 'POST',
         body: datos
       });
-      const respuesta = await enviar.json();
-      if(respuesta=="true"){
+      let respuesta = await enviar.json();
+      if(respuesta){
+        console.log(respuesta);
         const con =await Swal.fire({
           icon: "success",
           text: "USUARIO Y CONTRASEÑA CORRECTA",
@@ -48,22 +49,24 @@ bt.onclick = async(e) =>{
           if(con){
             usuario.value="";
             pass.value="";
-            window.location.href="VistaMedicoGeneral.php";
+            console.log("se redirigira")
+            window.location.href="php/validarTipoUsuario.php";
           }
           
         }
         else{
           Swal.fire({
             icon: "error",
-            text: "Ocurrio un error, Revise los datos",
+            text: "Usuario/Contraseña Incorrecto",
           });
         }
     }
     catch(e){
+      console.log("el error es: "+e);
         Swal.fire({
         icon: "error",
         title: "Error de servidor",
-        text: "Inténtalo de nuevo. El error es: " + e,
+        text: "Inténtalo mas tarde",
       });
     }
 };

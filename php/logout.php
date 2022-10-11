@@ -1,6 +1,6 @@
 <?php
 session_start();
-unset($_SESSION["S_Usuario"]);
+unset($_SESSION["Usuario"]);
 session_destroy();
 header("Location:../index.html");
 ?>

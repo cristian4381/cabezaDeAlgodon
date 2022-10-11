@@ -23,7 +23,7 @@ botonBuscar.onclick = async(e) =>{
           });
     }
     try {
-        const enviar= await fetch("php/buscarFicha.php",{
+        const enviar= await fetch("../php/buscarFicha.php",{
             method: 'POST',
             body: datos
           });
@@ -83,11 +83,12 @@ const cargarDatos=(datos)=>{
     fechaMedicamento.innerHTML=datos.Fecha_Recetado; 
     uso.innerHTML=datos.ModoUso;
 }
+/*
 const Validar=async()=>{
-  const validacion = await fetch ("php/validar.php");
+  const validacion = await fetch ("../php/validar.php");
   const sesion = await validacion.json();
   if(sesion=='error'){
     window.location.href="index.html";
   }
 }
-Validar();
+Validar();*/

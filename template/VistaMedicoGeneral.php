@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos/ficha.css">
-	<link rel="stylesheet" href="estilos/normalize.css">
+    <link rel="stylesheet" href="../estilos/ficha.css">
+	<link rel="stylesheet" href="../estilos/normalize.css">
 	<script src="https://kit.fontawesome.com/08348ab59f.js" crossorigin="anonymous"></script>
     <title>General</title>
 </head>
@@ -22,7 +22,7 @@
         <div class="contenedor__nav">
             <nav>
                 <ul>
-                    <li class="li__nav"><i class="fas fa-sign-out-alt"></i><a class="ss" href="php/logout.php">Cerrar sesion</a></li>
+                    <li class="li__nav"><i class="fas fa-sign-out-alt"></i><a class="ss" href="../php/logout.php">Cerrar sesion</a></li>
                 </ul>
             </nav>
             
@@ -39,7 +39,7 @@
                 <input type="submit" class="button" value="Pendiente" id="">  
             </div> 
     </div>
-    <script src="Js/VistaGeneral.js"></script>
+    <script src="../Js/VistaGeneral.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.9/dist/sweetalert2.all.min.js"></script>
 </body>
 </html>
