@@ -63,30 +63,12 @@
 							<h3>Solicitar Derrivación</h3>
 						</div>
 						<label for="" class="etiqueta">Fecha</label>
-						<input type="date" class="caja">
+						<input type="date" class="caja" id="fechaDerivacion">
 						<label for="" class="etiqueta">Motivo: </label>
-						<textarea name="" class="caja-texArea" id="" cols="30" rows="10"></textarea>
-						<label for="" class="etiqueta">Diagnostico: </label>
-						<textarea name="" class="caja-texArea" id="" cols="30" rows="10"></textarea>
+						<textarea name="" class="caja-texArea" cols="30" rows="10" id="motivoDerivacion"></textarea>
+						<!-- <label for="" class="etiqueta">Diagnostico: </label>
+						<textarea name="" class="caja-texArea" cols="30" rows="10" id="dianostivoDerivacion"></textarea> -->
 						<!--	<input type="button" class="button" value="Guardar"> -->
-					</div>
-					<div class="contenedor">
-						<div class="contenedor__subTitulos">
-							<h3>Asignar Enfermero</h3>
-						</div>
-						<label for="" class="etiqueta">Nombre: </label>
-						<select name="" class="caja" id="">
-							<option value="">...</option>
-							<option value="">juan</option>
-							<option value="">pedro</option>
-							<option value="">maria</option>
-						</select>
-						<label for="" class="etiqueta">Fecha</label>
-						<input type="date" class="caja">
-						<label for="" class="etiqueta">Paciente: <span class="text" id="paciente"></span> </label>
-						<label for="" class="etiqueta">Descripcion</label>
-						<textarea name="" class="caja-texArea" id="" cols="30" rows="10"></textarea>
-						<!--	<input type="button" class="button" value="Asingnar enfermero"> -->
 					</div>
 				</div>
 			</form>

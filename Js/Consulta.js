@@ -12,6 +12,7 @@ const botonFormularioDerivacion = document.getElementById(
 const botonGuardarConsulta = document.getElementById("GuardarConsulta");
 const botonEnviarSolicitud = document.getElementById("SolicitarDerivacion");
 const formConsulta = document.getElementById("formConsulta");
+const formDerivacion= document.getElementById("formDerivacion");
 
 let idPaciente;
 let boxIdPaciente = document.getElementById("codigo");
@@ -72,8 +73,7 @@ botonBuscar.onclick = async (e) => {
 };
 
 botonGuardarConsulta.onclick = async (e) => { 
-  let validacion= validarCamposFormularioConsulta();
-  if(validacion=="camposValidos"){
+  if(validarCamposFormularioConsulta()=="camposValidos"){
     let data= await generData();
     let respuesta = await EnviarData(data);
     if(respuesta){
@@ -102,7 +102,13 @@ const EnviarData=async(data)=>{
   });
   return enviar.json;
 }
-
+const EnviarSolicitudDerivacion=async(data)=>{
+  let enviar = await fetch("../php/guardarSolicitudDerivacion.php", {
+    method: "POST",
+    body: data,
+  });
+  return enviar.json;
+}
 const generData=async()=>{
   const validacion = await fetch("../php/InformacionUsuario.php");
   let tipoUsuario = await validacion.json();
@@ -141,7 +147,24 @@ const validarCamposFormularioConsulta=()=>{
   return "camposValidos";
 }
 
+const validarCamposFormularioDerivacion=()=>{
+  if(!formDerivacion.fechaDerivacion.value){
+    return Swal.fire({
+      icon: "error",
+      text: "Ingrese una fecha valida",
+      timer: 1000, 
+    });
+  }
+  if(!formDerivacion.motivoDerivacion.value){
+    return Swal.fire({
+      icon: "error",
+      text: "Ingrese el motivo",
+      timer: 1000, 
+    });
+  }
 
+  return "camposValidos";
+}
 const limpiarFormularioConsulta=()=>{
   formConsulta.fechaConsulta.value="";
   formConsulta.motivoConsulta.value="" ;
@@ -149,31 +172,52 @@ const limpiarFormularioConsulta=()=>{
 }
 
 botonEnviarSolicitud.onclick = async () => {
-  Swal.fire({
-    title: "Enviar Solicitud",
-    text: "Desa enviar la solicitud de derivacion",
-    icon: "question",
-    showCancelButton: true,
-    confirmButtonColor: "#3085d6",
-    cancelButtonColor: "#d33",
-    confirmButtonText: "si",
-    cancelButtonText: "no",
-  }).then(async (result) => {
-    if (result.isConfirmed) {
-      const con = await Swal.fire({
-        title: "Solicitudn enviada",
-        icon: "success",
-      });
-      if (con) {
-        location.reload();
+
+  if(validarCamposFormularioConsulta()=="camposValidos" && validarCamposFormularioDerivacion()=="camposValidos"){
+    Swal.fire({
+      title: "Enviar Solicitud",
+      text: "Desa enviar la solicitud de derivacion",
+      icon: "question",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "si",
+      cancelButtonText: "no",
+    }).then(async (result) => {
+      console.log("vamos bien ");
+      if (result.isConfirmed) {
+        console.log("vamos bien X2 ");
+        let data= await generData();
+        console.log("vamos bien X3"+data);
+        data.append("MotivoDerivacion",formDerivacion.motivoDerivacion.value);
+        let respuesta = await EnviarSolicitudDerivacion(data);
+        console.log("vamos bien X4 "+respuesta);
+        if(respuesta){
+          const con = await Swal.fire({
+            icon: "success",
+            text: "Solicitud Enviada"
+          });
+          if(con){
+            limpiarFormularioConsulta();
+            formDerivacion.motivoDerivacion.value="";
+            window.location.href="VistaMedicoGeneral.php";
+          }
+        }
+        else{
+          Swal.fire({
+            icon: "error",
+            text: "Ocurrio un error, Revise los datos",
+          });
+        }
       }
-    }
-  });
+    });
+  }
+ 
 };
 const cargarDatos = (datos) => {
   nombre.innerHTML = datos.Nombre;
   apellido.innerHTML = datos.Apellido;
-  paciente.innerHTML = datos.Nombre + " " + datos.Apellido;
+  //paciente.innerHTML = datos.Nombre + " " + datos.Apellido;
 };
 const buscarPaciente = async () => {
   let dato = new FormData();

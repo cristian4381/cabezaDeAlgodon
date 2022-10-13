@@ -107,7 +107,7 @@
     display: flex;
 }
 .flex .contenedor{
-    width: 50%;
+    width: 100%;
 }
 .flex .caja{
     width: 100%;
@@ -201,3 +201,13 @@ tbody .th{
     background: #c8b900;
     color: white;
 }
+/*
+@media only screen and (min-width: 830px){
+    .visible2 .flex .oculto{
+        display: block;
+    }
+    .contenedor{
+        width: 90%;
+    }
+}*/
+

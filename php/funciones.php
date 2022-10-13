@@ -33,6 +33,13 @@ function guardarConsulta($Paciente, $Medico, $Fecha, $Motivo, $Diagnostico)
     $enviar = $bd->prepare($query);
     return $enviar->execute([$Paciente, $Medico, $Fecha, $Motivo, $Diagnostico]);
 }
+function guardarSolicitudDerivacion($Paciente, $Medico, $Fecha, $Motivo, $Diagnostico,$MotivoDerivacion)
+{
+    $query = 'CALL guardarSolicitudDerivacion(?,?,?,?,?,?)';
+    $bd = Obtenerconexion();
+    $enviar = $bd->prepare($query);
+    return $enviar->execute([$Motivo, $Diagnostico, $Paciente, $Medico, $MotivoDerivacion,$Fecha]);
+}
 function BuscarFicha($codigo)
 {
     $queryBuscar = 'Call buscarFicha(?)';
