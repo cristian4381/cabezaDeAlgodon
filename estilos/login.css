@@ -1,0 +1,113 @@
+body{
+    background-color: #282c34;
+
+}
+.login{
+   
+    position: relative;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: calc(10px + 2vmin); 
+} 
+/*
+.caja{
+    display: block;
+    border: none;
+	/* font-family: georgia; */
+	/* font-size: 18px; *
+	border-radius: 6px;
+	/* text-align: center; *
+	margin-bottom: 20px;
+	height: 25px;
+} */
+.div_form{
+    position: relative;
+    --color:#5757577e;
+}
+/* .caja1{
+    width: 100%;
+    font-family: inherit;
+    font-size: 1rem;
+    color: #706c6c;
+    padding: .6em .3em;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--color);
+} */
+.div_form__label1{
+    color: var(--color);
+    cursor: pointer;
+    position: absolute;
+    top: 10%;
+    left: 5px;
+    transform: translateY(10px);
+    transition: transform .5s, color .3s;
+    
+}
+.caja:focus + .div_form__label1,.caja:not(:placeholder-shown)+ .div_form__label1{
+    transform: translateY(-20px) scale(.7);
+    transform-origin: top left;
+    --color:white;
+} 
+.caja{
+    width: 100%;
+    font-family: inherit;
+    font-size: 18px; ;
+    color: #706c6c;
+    padding: .6em .3em;
+   border: none;
+    border-radius: 6px;
+    outline-color: #039be5;
+    
+    border-bottom: 1px solid var(--color); 
+    margin: 20px 0 20px;
+}
+.div_form__label2{
+    color: var(--color);
+    cursor: pointer;
+    position: absolute;
+    top: 60%;
+    left: 5px;
+    transform: translateY(10px);
+    transition: transform .5s, color .3s;
+    
+}
+.caja:focus + .div_form__label2,.caja:not(:placeholder-shown)+ .div_form__label2{
+    transform: translateY(-20px) scale(.7);
+    transform-origin: top left;
+    --color:white;
+    
+}
+.form__button{
+    width: 100%;
+	border-radius: 6px;
+	border: none;
+	background: #C62828;
+	color: white;
+
+}
+.form__button:hover{
+    background: #003c8f;
+}
+.titulo{
+    margin: 0;
+    padding: 25px;
+    color: white;
+    background: #455A64;
+
+    font-size: 35px;
+}
+
+
+/*
+.contenedor{
+    background: #455A64;
+    
+    position: relative;
+    
+    
+} */

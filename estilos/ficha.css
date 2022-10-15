@@ -1,0 +1,213 @@
+
+.main{
+    background-color: #e0e0e0;
+    padding: 20px;
+    
+}
+.button{
+    width: 100%;
+    height: 35px;
+	border-radius: 6px;
+    margin-top: 10px;
+	border: none;
+	background: #C62828;
+	color: white;
+}
+.button:hover{
+    background: #003c8f;
+}
+/* .contenedor{
+    padding: 30px;
+    background-color: gray;
+} */
+.contenedor__etiqueta, .etiqueta{
+    display: block;
+    font-weight: bold;
+    padding: 10px 0;
+    
+}
+.contenedor__examen{
+    margin-top: 10px;
+}
+.contenedor__parrafo{
+    font-weight: normal;
+} 
+.contenedor__titulo{
+    background: #8e0000;
+}
+
+.contenedor{
+    border-radius: 6px;
+    margin: 0 20px 20px 20px ;
+    padding: 20px; 
+    background-color: white;
+    box-shadow: 0px 10px 15px -10px black;
+}
+.contenedor__nav{
+    background-color: #c62828;
+    display: flex;
+    padding: 10px 0;
+    justify-content: flex-end;
+}
+.titulo{
+    margin: 0;
+    padding: 10px;
+    color: white;
+}
+.subTitulo{
+    margin: 0;
+    padding: 0 10px 15px 10px;
+    color: white;
+    text-align: center;
+}
+.contenedor__subTitulos{
+    text-align: center;
+    padding: 15px ;
+    background-color: #42a5f5;
+    border-radius: 6px;
+    
+}
+
+.li__nav{
+    display: inline;
+    margin: 0 15px;
+    font-size: 1.5em;
+}
+.li__nav a{
+    color: white;
+    text-decoration: none;
+   
+    margin: 0 1em;
+}
+.li__nav a:hover{
+    color: black;
+    font-weight: bold;
+}
+.caja{
+    width: 30%;
+    font-family: georgia;
+    font-size: 18px;
+    border-radius: 6px;
+    text-align: center;
+   
+    height: 55px;
+    border: solid 1px #babdbe;
+}
+.caja:hover, .caja-texArea:hover{
+    /* box-shadow: 0 0 1px 0 #039be5; */
+    border: solid 2px #039be5;
+}
+.caja-texArea{
+    border: solid 1px #babdbe;
+    border-radius: 6px;
+    width: 100%;
+    height: 100px;
+}
+.flex{
+    display: flex;
+}
+.flex .contenedor{
+    width: 100%;
+}
+.flex .caja{
+    width: 100%;
+}
+
+/*tabla*/
+.tabla{
+    margin: 10px 0;
+    border: solid 1px #babdbe;
+    width: 100%;
+    
+    border-collapse: collapse;
+    
+}
+.th{
+    
+    border-bottom: solid 1px #babdbe;
+    padding: 5px;
+    
+}
+tbody .th{
+    
+    font-weight: normal;
+}
+
+.th .button{
+    width: 30px;
+    height: 30px;
+    margin: 0;
+}
+.th .r{
+    width: 100px;
+}
+/*
+.nav__li{
+	color: white;
+	display: inline-block;
+	padding: 1em 1em;
+	font-size: 1em;
+}
+.nav__li a{
+	color: white;
+	margin-left: 1em;
+	margin-right: 1em;
+	text-decoration: none;
+}
+.nav__li:hover  a{
+	color: blue;
+}*/
+
+.oculto{
+    visibility: hidden;
+    display: none;
+}
+.ocultar{
+    visibility: hidden;
+    display: none;
+}
+.visible{
+    visibility: visible;
+    display: block;
+}
+.visible2{
+    visibility: visible;
+    display: flex;   
+}
+.text{
+    font-weight: normal;
+}
+
+.option{
+   
+    
+    position: relative;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+}
+.option .contenedor{
+    width: 500px;
+
+}
+
+.bt-warning{
+    background: #ffeb3b;
+    color: black;
+}
+.bt-warning:hover{
+    background: #c8b900;
+    color: white;
+}
+/*
+@media only screen and (min-width: 830px){
+    .visible2 .flex .oculto{
+        display: block;
+    }
+    .contenedor{
+        width: 90%;
+    }
+}*/
+
