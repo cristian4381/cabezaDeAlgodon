@@ -56,6 +56,25 @@ function BuscarPaciente($codigo)
     $enviar->execute([$codigo]);
     return $enviar->fetchObject();
 }
+function aprobarSolicitud($solicitud,$Medico,$Fecha)
+{
+    $query = 'Call aprobarSolicitud(?,?,?)';
+    $bd = Obtenerconexion();
+    $enviar = $bd->prepare($query);
+    return $enviar->execute([$solicitud,$Medico,$Fecha]);
+}
+function buscarSolicitudes(){
+    $query = 'CALL solicitudes()';
+    $bd = Obtenerconexion();
+    $enviar = $bd->query($query);
+    return $enviar->fetchAll();
+}
+function medicosEspecialistas(){
+    $query = 'CALL medicosEspecialistas()';
+    $bd = Obtenerconexion();
+    $enviar = $bd->query($query);
+    return $enviar->fetchAll();
+}
 function Obtenerconexion()
 {
     include_once 'conexion.php';

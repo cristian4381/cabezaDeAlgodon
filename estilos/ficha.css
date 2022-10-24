@@ -13,6 +13,12 @@
 	background: #C62828;
 	color: white;
 }
+.buttonTabla{
+    width: 75px;
+    height: 30px;
+    border-radius: 6px;
+    border: none;
+}
 .button:hover{
     background: #003c8f;
 }
@@ -83,6 +89,17 @@
     color: black;
     font-weight: bold;
 }
+
+.cajaTabla{
+    width: 100%;
+
+    font-size: 18px;
+    border-radius: 6px;
+    height: 25px;
+    border: solid 1px #babdbe;
+}
+
+
 .caja{
     width: 30%;
     font-family: georgia;
@@ -93,7 +110,7 @@
     height: 55px;
     border: solid 1px #babdbe;
 }
-.caja:hover, .caja-texArea:hover{
+.caja:hover, .caja-texArea:hover, .cajaTabla:hover{
     /* box-shadow: 0 0 1px 0 #039be5; */
     border: solid 2px #039be5;
 }
@@ -200,6 +217,13 @@ tbody .th{
 .bt-warning:hover{
     background: #c8b900;
     color: white;
+}
+.bt-primary{
+    background: #2196f3;
+    color: white;
+}
+.bt-primary:hover{
+    background: #0069c0;
 }
 /*
 @media only screen and (min-width: 830px){
