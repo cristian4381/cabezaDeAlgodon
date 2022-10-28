@@ -61,7 +61,7 @@ const cargarDatos=(datos)=>{
     let edad=document.getElementById("edad");
     let fechaVisita= document.getElementById("fechaVisita");
     let motivo= document.getElementById("motivo");
-    let medicoT = document.getElementById("medico");
+    let medicoT = document.getElementById("NombreUsuario");
     let examen= document.getElementById("examen");
     let resultado= document.getElementById("resultado");
     let diagnostico= document.getElementById("diagnostico");
