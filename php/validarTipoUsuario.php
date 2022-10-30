@@ -19,13 +19,4 @@ if($_SESSION["Usuario"]){
 else{
     header("Location:../index.html");
 }
-//header("Location:../index.html");
-/*
-if(isset($_SESSION["S_Usuario"]) == true){
-    echo json_encode('true');
-}
-else{
-    echo json_encode('error');
-}*/
-
 ?>

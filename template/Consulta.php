@@ -66,9 +66,6 @@
 						<input type="date" class="caja" id="fechaDerivacion">
 						<label for="" class="etiqueta">Motivo: </label>
 						<textarea name="" class="caja-texArea" cols="30" rows="10" id="motivoDerivacion"></textarea>
-						<!-- <label for="" class="etiqueta">Diagnostico: </label>
-						<textarea name="" class="caja-texArea" cols="30" rows="10" id="dianostivoDerivacion"></textarea> -->
-						<!--	<input type="button" class="button" value="Guardar"> -->
 					</div>
 				</div>
 			</form>
@@ -77,7 +74,6 @@
 			<input type="button" class="button" value="Buscar Otro Paciente" id="Regresar">
 		</section>
 		<script src="../Js/Consulta.js"></script>
-		<script src="../JS/Regresar.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.9/dist/sweetalert2.all.min.js"></script>
 	</div>
 </body>

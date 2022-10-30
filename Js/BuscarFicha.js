@@ -48,6 +48,7 @@ botonBuscar.onclick = async(e) =>{
               });
             }  
     } catch (error) {
+      console.log(error);
         Swal.fire({
             icon: "error",
             title: "ERROR",
@@ -61,7 +62,7 @@ const cargarDatos=(datos)=>{
     let edad=document.getElementById("edad");
     let fechaVisita= document.getElementById("fechaVisita");
     let motivo= document.getElementById("motivo");
-    let medicoT = document.getElementById("NombreUsuario");
+    let medicoT = document.getElementById("medico");
     let examen= document.getElementById("examen");
     let resultado= document.getElementById("resultado");
     let diagnostico= document.getElementById("diagnostico");
@@ -71,24 +72,15 @@ const cargarDatos=(datos)=>{
     let uso= document.getElementById("uso"); 
     nombre.innerHTML=datos.Nombre;
     apellido.innerHTML=datos.Apellido;
-    edad.innerHTML=datos.edad;
+    edad.innerHTML=datos.Edad;
     fechaVisita.innerHTML=datos.Fecha_Visita;
     motivo.innerHTML=datos.Motivo;
-    medicoT.innerHTML=datos.Nombre_Medco; 
+    medicoT.innerHTML=datos.NombreUsuario; 
     examen.innerHTML=datos.Examen;
-    resultado.innerHTML=datos.resultado;
+    resultado.innerHTML=datos.Resultado;
     diagnostico.innerHTML=datos.Diagnostico;
     observaciones.innerHTML=datos.Observaciones;
     medicamento.innerHTML=datos.Nombre_Medicamento;
     fechaMedicamento.innerHTML=datos.Fecha_Recetado; 
     uso.innerHTML=datos.ModoUso;
 }
-/*
-const Validar=async()=>{
-  const validacion = await fetch ("../php/validar.php");
-  const sesion = await validacion.json();
-  if(sesion=='error'){
-    window.location.href="index.html";
-  }
-}
-Validar();*/
